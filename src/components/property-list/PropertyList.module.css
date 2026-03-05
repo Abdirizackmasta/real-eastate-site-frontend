@@ -1,0 +1,152 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color: #0f172a;
+}
+.top_bar {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.top_bar h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.top_bar p {
+  font-size: 1.2rem;
+  color: #475569;
+}
+/* Top bar with filters */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.leftControls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* inputs & selects */
+.input,
+.select {
+  padding: 1rem;
+  border: 1px solid #e6edf3;
+  border-radius: 8px;
+  background: #fff;
+  min-width: 140px;
+  font-size: 0.95rem;
+}
+
+.input {
+  width: 300px;
+}
+
+/* Clear button only when active */
+.clearBtn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Count */
+.count {
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+/* grid wrapper */
+.gridWrap {
+  min-height: 320px;
+}
+
+/* grid cards */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+/* no results */
+.noResults {
+  text-align: center;
+  padding: 2rem;
+  background: #fff7ed;
+  border: 1px solid #ffe8cc;
+  border-radius: 8px;
+  color: #92400e;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.pageBtn {
+  background: #0f172a;
+  color: #fff;
+  border: none;
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.pageBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pageNumbers {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .input {
+    min-width: 140px;
+  }
+  .select {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .topBar {
+    gap: 0.5rem;
+  }
+  .leftControls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .input,
+  .select,
+  .clearBtn {
+    width: 100%;
+  }
+  .count {
+    text-align: right;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

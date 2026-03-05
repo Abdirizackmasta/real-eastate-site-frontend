@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.title {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.icon {
+  font-size: 1.3rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f5f7fa;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+}
+
+.avatar {
+  font-size: 1.5rem;
+  color: #4e9eff;
+}
+
+.name {
+  font-weight: 500;
+  color: #333;
+}
+.dropdown {
+  position: relative;
+}

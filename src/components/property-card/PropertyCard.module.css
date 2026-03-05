@@ -1,0 +1,161 @@
+.card * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.imageWrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.bookmark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sale {
+  background-color: #2e8b57;
+}
+.rent {
+  background-color: #1e90ff;
+}
+.lease {
+  background-color: #ff9800;
+}
+
+.typeBadge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  text-transform: capitalize;
+}
+
+.info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.location {
+  font-size: 13px;
+  color: #666;
+}
+
+.details {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  color: #555;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-size: 18px;
+  color: #2e8b57;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #777;
+}
+
+.construction {
+  margin-top: 10px;
+}
+
+.underConstruction {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff5722;
+  margin-bottom: 4px;
+}
+
+.completion {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.progressBar {
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 8px;
+  width: 100%;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.progressText {
+  font-size: 12px;
+  color: #444;
+  text-align: right;
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    font-size: 14px;
+  }
+  .price {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,157 @@
+/* Footer Base */
+.footer {
+  background-color: #0b1c39;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Footer Sections */
+.footerSection {
+  flex: 1 1 250px; /* grow, shrink, min width */
+  min-width: 250px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footerSection p {
+  color: #dcdcdc;
+  margin-bottom: 20px;
+}
+
+.footerSection h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  border-left: 3px solid #2e86de;
+  padding-left: 10px;
+}
+
+/* Links */
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 12px;
+}
+
+.footerSection ul li a {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footerSection ul li a:hover {
+  color: #2e86de;
+  transform: translateX(4px); /* subtle hover movement */
+}
+
+/* Contact Info */
+.contactList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #dcdcdc;
+  margin-bottom: 10px;
+}
+
+.contactList li svg {
+  color: #2e86de;
+}
+
+/* Social Icons */
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.socialIcons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #2e86de;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.socialIcons a:hover {
+  background: #1c64b8;
+  transform: scale(1.1); /* subtle pop effect */
+}
+
+/* Bottom Bar */
+.bottomBar {
+  text-align: center;
+  background-color: #09162c;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 40px;
+  border-top: 1px solid #1e2f4d;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .footerSection {
+    justify-content: center;
+  }
+  .footerSection h4 {
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  .contactList {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .socialIcons a {
+    width: 36px;
+    height: 36px;
+  }
+}

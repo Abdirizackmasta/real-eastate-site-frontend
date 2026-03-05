@@ -1,0 +1,134 @@
+.propertyDetails {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+.propertyHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.propertyHeader h1 {
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.location {
+  color: #777;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.price {
+  color: #c4a000;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.imageGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.imageGallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.propertyDescription {
+  margin: 40px 0;
+  padding: 50px;
+}
+
+.propertyDescription h3 {
+  color: #c4a000;
+  margin-bottom: 10px;
+}
+
+.propertyInfo p {
+  margin: 6px 0;
+  color: #444;
+}
+
+.agentSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+}
+
+.agentAvatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.agentInfo h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.enquiryForm {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.enquiryForm h3 {
+  margin-bottom: 20px;
+  color: #c4a000;
+}
+
+.enquiryForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.enquiryForm input,
+.enquiryForm textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.enquiryForm button {
+  background: #c4a000;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.enquiryForm button:hover {
+  background: #b38f00;
+}
+
+@media (max-width: 768px) {
+  .agentSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageGallery img {
+    height: 180px;
+  }
+}

@@ -1,0 +1,225 @@
+.header {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  color: #0b1b2b;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  box-shadow: 0 6px 18px rgba(9, 30, 63, 0.08);
+}
+
+/* TOP BAR */
+.topBar {
+  background: linear-gradient(
+    90deg,
+    rgba(12, 41, 93, 0.03),
+    rgba(12, 41, 93, 0.02)
+  );
+  font-size: 13px;
+  color: #25406a;
+}
+.topInner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap; /* KEY: fixes overflow on small screens */
+}
+.contact {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contactLink {
+  text-decoration: none;
+  color: #25406a;
+  opacity: 0.95;
+  transition: opacity 0.18s ease, transform 0.12s ease;
+}
+.contactLink:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.dot {
+  color: #c6d5e8;
+}
+
+/* Social Icons */
+.social {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.iconBtn {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  transition: transform 0.12s ease;
+}
+.iconBtn:hover {
+  transform: translateY(-2px);
+}
+.iconBtn svg {
+  fill: #25406a;
+}
+
+/* BOTTOM BAR */
+.bottomBar {
+  background: white;
+}
+.bottomInner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+/* Brand */
+.brand img {
+  height: 70px;
+  width: auto;
+}
+
+/* Navigation (Desktop) */
+.nav {
+  flex: 1 1 auto;
+}
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+.navLink {
+  text-decoration: none;
+  color: #0b1b2b;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.12s ease, transform 0.12s ease;
+}
+.navLink:hover {
+  background: rgba(11, 59, 145, 0.06);
+  transform: translateY(-2px);
+}
+
+/* CTA + Burger */
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.cta {
+  background: linear-gradient(90deg, #0b3b91, #0160d6);
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(1, 96, 214, 0.18);
+}
+
+.burger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #0b1b2b;
+}
+.burgerInner {
+  width: 24px;
+  height: 3px;
+  background: #0b1b2b;
+  position: relative;
+  transition: 0.2s ease;
+}
+.burgerInner::before,
+.burgerInner::after {
+  content: "";
+  width: 24px;
+  height: 3px;
+  background: #0b1b2b;
+  position: absolute;
+  left: 0;
+  transition: 0.2s;
+}
+.burgerInner::before {
+  top: -7px;
+}
+.burgerInner::after {
+  top: 7px;
+}
+
+/* Animate into X */
+.burgerOpen {
+  transform: rotate(45deg);
+}
+.burgerOpen::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+.burgerOpen::after {
+  opacity: 0;
+}
+
+/* MOBILE NAV */
+@media (max-width: 880px) {
+  .topBar {
+    flex-wrap: wrap;
+  }
+  .topBar .social,
+  .topBar .contact {
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+  .navList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+    display: none;
+    box-shadow: 0 12px 30px rgba(9, 30, 63, 0.12);
+  }
+  .navList.open {
+    display: flex;
+  }
+
+  .cta {
+    display: none; /* optional */
+  }
+  .burger {
+    display: block;
+  }
+}
+
+/* XS Screens */
+@media (max-width: 480px) {
+  .brand img {
+    height: 60px;
+  }
+  .navLink {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

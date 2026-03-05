@@ -1,0 +1,43 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a2342, #1b4b7d);
+  padding: 1rem;
+}
+
+.box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.switchText {
+  margin-top: 1.2rem;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.switchBtn {
+  background: none;
+  border: none;
+  color: #0056b3;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switchBtn:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .box {
+    padding: 1.5rem;
+  }
+}

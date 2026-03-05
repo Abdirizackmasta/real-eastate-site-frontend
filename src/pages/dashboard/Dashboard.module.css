@@ -1,0 +1,91 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background: #f9fafc;
+  color: #333;
+  min-height: 100vh;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.header h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.header p {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.chartSection {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.chartSection:hover {
+  transform: translateY(-3px);
+}
+
+.chartSection h3 {
+  margin-bottom: 1rem;
+  color: #34495e;
+  font-size: 1.2rem;
+}
+
+.recentSection {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.recentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.recentHeader h3 {
+  color: #34495e;
+}
+
+.viewAll {
+  font-size: 0.9rem;
+  color: #3498db;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.viewAll:hover {
+  color: #1d6fa5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
